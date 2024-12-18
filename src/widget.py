@@ -31,7 +31,12 @@ print(mask_account_card("MasterCard 7158300734726758"))
 print(mask_account_card("Maestro 1596837868705199"))
 
 
+def get_date(day_number: Union[str, int]) -> str:
+    """Функция возвращает дату операции"""
+
+    return ".".join(day_number[:10].replace("-", ".").replace(":", "").split("."))
 
 
-def get_date(date_number: Union[str]) -> Union[str]:
-
+new_date = get_date("2024-03-11T02:26:18.671407").split('.')
+result_date = ".".join(new_date[::-1])
+print(result_date)
