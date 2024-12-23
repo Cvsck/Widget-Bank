@@ -13,8 +13,3 @@ def get_mask_account(account_number: Union[str]) -> Union[str]:
     """ принимает на вход номер счета и возвращает ее маску """
 
     return f"** {account_number[-4:]}"
-
-
-
-
-
