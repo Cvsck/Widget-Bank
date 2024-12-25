@@ -8,7 +8,7 @@
 
 1. Клонируй репозиторий:
 '''
- git clone https:// github.com
+ git clone https:// [github.com](https://github.com/Cvsck/Widget-Bank.git)
 '''
 2. Установка зависимости:
 '''
