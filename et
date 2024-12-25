@@ -1,0 +1,29 @@
+[33mcommit fb1424e60c75a65c64f80e6359d34b7ece9eb758[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/homework_10_1[m[33m)[m
+Author: main <moikrym@mail.ru>
+Date:   Wed Dec 25 10:29:06 2024 +0300
+
+    add function
+
+[33mcommit 63bab698c9a015fd727bdca68a2ac7d1bfd370e4[m[33m ([m[1;31mbank/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: main <moikrym@mail.ru>
+Date:   Mon Dec 23 11:46:31 2024 +0300
+
+    init commit
+
+[33mcommit a35c24950c14580cfc4d2d11fa86ab13fb4e45d3[m
+Author: unknown <moikrym@mail.ru>
+Date:   Wed Dec 18 12:14:00 2024 +0300
+
+    add date
+
+[33mcommit 961711858d82b91250be5710697432bd2106e785[m
+Author: unknown <moikrym@mail.ru>
+Date:   Wed Dec 18 09:53:31 2024 +0300
+
+    add account
+
+[33mcommit ad41623d083e3ff26e4d5c8f9f19e3396853f703[m
+Author: unknown <moikrym@mail.ru>
+Date:   Tue Dec 17 13:53:07 2024 +0300
+
+    add all files
