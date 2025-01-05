@@ -18,3 +18,7 @@ pip install -r requirements.txt
 '''
 poetry add --group dev pytest
 '''
+4. Сгенерирован отчет о покрытии в HTML-формате
+'''
+pytest --cov=src --cov-report=html
+'''
