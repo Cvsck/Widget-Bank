@@ -14,3 +14,7 @@
 '''
 pip install -r requirements.txt
 '''
+3. Установлена библиотека pytest
+'''
+poetry add --group dev pytest
+'''

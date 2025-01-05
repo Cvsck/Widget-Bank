@@ -1,7 +1,7 @@
-import typing
+from typing import List, Dict, Any
 
 
-def filter_by_state(my_lists: [str], state: [str] = 'EXECUTED') -> typing.Any:
+def filter_by_state(my_lists: List[Dict[str, Any]], state: str = 'EXECUTED') -> List[Dict[str, Any]]:
     """Функция возвращает новый список словарей"""
 
     new_list_dic = []
@@ -13,7 +13,7 @@ def filter_by_state(my_lists: [str], state: [str] = 'EXECUTED') -> typing.Any:
     return new_list_dic
 
 
-def sort_by_date(new_date: [typing.Any], key: [typing.Any] = None) -> typing.Any:
+def sort_by_date(new_date: List[Dict[str, Any]], key: str = 'date') -> List[Dict[str, Any]]:
     """Функция возвращает новый список, отсортированный по дате"""
 
     if not key:
