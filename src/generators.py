@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Iterator
+from typing import List, Dict, Iterator
 
 transactions = [
     {
@@ -65,7 +65,7 @@ for transact in usd_transactions:
     print(transact)
 
 
-def transaction_descriptions(transaction: list[str]) -> str:
+def transaction_descriptions(transaction: list[dict]) -> str:
     """
     Функция возвращает описание каждой операции по очереди
     """
@@ -75,20 +75,18 @@ def transaction_descriptions(transaction: list[str]) -> str:
         yield x
 
 
-descriptions = transaction_descriptions(usd_transactions)
+descriptions = list(transaction_descriptions(usd_transactions))
 print(*list(descriptions), sep="\n")
 
 
-def card_number_generator(start: [int], stop: [int]) -> int:
+def card_number_generator(start: int, stop: int) -> Iterator[str]:
     """
     Выдает номера банковских карт в формате
     XXXX XXXX XXXX XXXX
     """
-
-    for card_list in range(start + 1, stop + 5):  # установление границ работы цикла
-
-        if 1 <= start or stop <= 9999999999999999:  # устанавливаем диапазон
-            card_num = "".join([str(card_list) for _ in range(16)])  # приведение значения к строке
+    for card_list in range(start, stop + 1):  # установление границ работы цикла
+        if 0 <= card_list <= 9999999999999999:  # устанавливаем диапазон
+            card_num = f"{card_list:016}"
             format_card_num = " ".join([card_num[i:i + 4] for i in range(0, 16, 4)])
             yield format_card_num
 
