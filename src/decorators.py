@@ -9,7 +9,7 @@ def log(filename: Optional[str] = None) -> Callable:
     а также ее результаты или возникшие ошибки
     """
 
-    def decorate(func: Any) -> Any:
+    def my_decorator(func: Any) -> Any:
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
             start_time = time.time()
@@ -20,20 +20,24 @@ def log(filename: Optional[str] = None) -> Callable:
                     f"{func.__name__} started at {start_time} and finished at {end_time} with result: {result}"
                 )
                 if filename is not None:
-                    with open("../filename.txt", "a", encoding="utf-8") as file:
+                    with open(filename, "a", encoding="utf-8") as file:
                         file.write(f"{func.__name__} ok\n")
                 else:
                     print(log_message)
 
-                    return result
             except Exception as e:
+                log_message_1 = f"{func.__name__} error {e.__class__.__name__}. Inputs: {args}, {kwargs}"
                 if filename:
-                    with open("../filename.txt", "a", encoding="utf-8") as file:
-                        file.write(f"{func.__name__} error {e.__class__.__name__}.Inputs: {args}, {kwargs}")
+                    with open(filename, "a", encoding="utf-8") as file:
+                        file.write(log_message_1 + "\n")
+                else:
+                    print(log_message_1)
+                raise e
+            return result
 
         return wrapper
 
-    return decorate
+    return my_decorator
 
 
 @log(filename="mylog.txt")
