@@ -45,3 +45,7 @@ transaction_descriptions
 '''
 card_number_generator
 '''
+## Cоздан модуль decorators
+1. Реализован декоратор 
+log
+2. Написаны тесты к декоратору
