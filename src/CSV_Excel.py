@@ -35,10 +35,10 @@ print(transaction)
 
 def read_excel(filename: str) -> List[Dict[str, Any]]:
     """
-    Function to read Excel file and return its content as a list of dictionaries
+     Функция принимающая путь к файлу, считывает информацию c Excel файла
     """
     if not os.path.exists(filename):
-        logger.error("File not found")
+        logger.error("Файл не найден")
         return []  # Return an empty list in case of error
     logger.info("Начало загрузки Excel файла")
     reading_excel = pd.read_excel(filename)
